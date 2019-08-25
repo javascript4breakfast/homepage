@@ -8,13 +8,13 @@ const config = {
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
-    path: path.join(__dirname, './docs'),
+    path: path.join(__dirname, './dist'),
   },
   devtool: 'inline-source-map',
   devServer: {
       open: 'Google Chrome',
       hot: true,
-      contentBase: path.join(__dirname, './docs'),
+      contentBase: path.join(__dirname, './dist'),
       compress: true,
       port: 9000
   },
