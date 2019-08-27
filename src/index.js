@@ -3,20 +3,27 @@ import ReactDOM from 'react-dom';
 import NavBar from './components/NavBar';
 import DrawerMenu from './components/DrawerMenu';
 import Marquee from './components/Marquee';
+import TabNav from './components/TabNav';
 
 import 'semantic-ui-css/semantic.min.css'
 import './assets/css/hamburgers.css';
 import './assets/css/app.less';
+
+
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             isDrawerOpen: false,
+            activeTabItem: 'bio',
         }
     }
 
-    toggleBurger() {
+    handleItemClick = (e, { name }) => this.setState({ activeTabItem: name });
+
+
+    toggleBurger = () => {
         const hamburger = document.querySelector('.hamburger');
         this.setState(prevState => ({
             isDrawerOpen: !prevState.isDrawerOpen,
@@ -25,12 +32,13 @@ class App extends Component {
     }
 
     render() {
-        const showDrawer = this.state.isDrawerOpen;
+        const { isDrawerOpen, activeTabItem } = this.state;
         return (
             <div>
                 <NavBar onBurgerToggle={this.toggleBurger.bind(this)} />
-                { showDrawer ? <DrawerMenu /> : null }
+                { isDrawerOpen ? <DrawerMenu /> : null }
                 <Marquee />
+                <TabNav handleItemClick={this.handleItemClick.bind(this)} activeTab={activeTabItem} />
             </div>
         )
     }
