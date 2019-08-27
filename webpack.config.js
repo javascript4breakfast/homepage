@@ -9,6 +9,7 @@ const config = {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
     path: path.join(__dirname, './dist'),
+    publicPath: '/',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -16,7 +17,9 @@ const config = {
       hot: true,
       contentBase: path.join(__dirname, './dist'),
       compress: true,
-      port: 9000
+      port: 9000,
+      historyApiFallback: true,
+
   },
   module: {
       rules: [{
