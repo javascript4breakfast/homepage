@@ -2,7 +2,10 @@ import React from 'react';
 
 const DrawerMenu = () => {
     return (
-        <div>Drawer Menu here</div>
+        <div>
+            <div>Chat</div>
+            <div>Download Resume</div>
+        </div>
     )
 }
 
