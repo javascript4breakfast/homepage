@@ -25,7 +25,7 @@ class App extends Component {
         return (
             <div>
                 <h3>Temporarily Under Construction</h3>
-                <blockquote>Next Deployment: Tuesday August 27th 12AM PST</blockquote>
+                <blockquote>Next Deployment: Tuesday August 27th 8AM PST</blockquote>
             </div>
         )
     }
