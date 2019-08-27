@@ -1,31 +1,36 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {Menu, Button} from 'semantic-ui-react';
-import {themeDark, themeLight} from './configs/themeConfigs';
-import 'semantic-ui-css/semantic.min.css'
-import './assets/css/app.less';
+import NavBar from './components/NavBar';
+import DrawerMenu from './components/DrawerMenu';
+import Marquee from './components/Marquee';
 
+import 'semantic-ui-css/semantic.min.css'
+import './assets/css/hamburgers.css';
+import './assets/css/app.less';
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            darkTheme: false,
+            isDrawerOpen: false,
         }
     }
 
-    toggleTheme() {
+    toggleBurger() {
+        const hamburger = document.querySelector('.hamburger');
         this.setState(prevState => ({
-            darkTheme: !prevState.darkTheme
+            isDrawerOpen: !prevState.isDrawerOpen,
         }));
+        hamburger.classList.toggle('is-active');
     }
 
     render() {
-        const isDark = this.state.darkTheme;
+        const showDrawer = this.state.isDrawerOpen;
         return (
             <div>
-                <h3>Temporarily Under Construction</h3>
-                <blockquote>Next Deployment: Tuesday August 27th 8AM PST</blockquote>
+                <NavBar onBurgerToggle={this.toggleBurger.bind(this)} />
+                { showDrawer ? <DrawerMenu /> : null }
+                <Marquee />
             </div>
         )
     }
