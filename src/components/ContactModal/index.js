@@ -35,7 +35,7 @@ const ContactModal = () => (
                               <Icon name='mobile alternate' />
                               {`1(408)609-1239`}
                           </Header>
-                          <a href="sms:+14086091239?body=Hello%20Jonathan">
+                          <a href="sms:+14086091239">
                               <Button circular size='huge' primary>Text</Button>
                           </a>
                       </Grid.Column>
