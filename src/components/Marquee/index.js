@@ -9,8 +9,8 @@ const Marquee = () => {
                 <Icon circular color='grey' name='code' size='big' />
             </div>
             <div className='marquee-item'>
-                <Header block as='h1'>
-                    javascript4breakfast
+                <Header as='h1'>
+                    Javascript4Breakfast
                 </Header>
             </div>
         </div>

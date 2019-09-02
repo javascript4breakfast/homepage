@@ -4,6 +4,7 @@ const skills = [
     {name: 'React.js', level: 9, type: 'technical'},
     {name: 'Express', level: 9, type: 'technical'},
     {name: 'Web E-Commerce', level: 9, type: 'technical'},
+    {name: 'Mobile Development', level: 9, type: 'technical'},
     {name: 'Progressive Web Applications', level: 9, type: 'technical'},
     {name: 'PubNub', level: 9, type: 'technical'},
     {name: 'React Native', level: 6, type: 'technical'},

@@ -8,7 +8,7 @@ const SkillsComponent = () => {
         <div>
             <div className='skills-header'>
                 <Header as='h2'>
-                    Skills that pay the bills.
+                    Technical Skill Set
                 </Header>
             </div>
             <div className='card-skill-wrapper'>

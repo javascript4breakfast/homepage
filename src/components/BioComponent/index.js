@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import ContactModal from '../ContactModal';
 import {Button, Card, Divider, Header, Icon} from 'semantic-ui-react';
 
 const items = [
@@ -62,9 +63,10 @@ const BioComponent = () => {
                             </div>
                         </div>
                         <div style={{marginTop: '0.8rem'}}>
-                            <p>
-                                A Javascript Engineer with more than four years of professional experience designing high level software applications for various business and consumer needs. Detail oriented team player who stays abreast of front end technology trends specifically in E-Commerce. Skilled at efficiently resolving project issues and meeting deadlines.
-                            </p>
+                            <div style={{fontSize: '1.333rem'}}>
+                                A Javascript Engineer with more than four years of professional experience designing high level software applications for various business and consumer needs. Detail oriented team player who stays abreast of front end technology trends specifically in E-Commerce. Skilled at efficiently resolving project issues and meeting deadlines. <Divider hidden />
+                            <span style={{fontWeight: 'bold'}}>A special knack for React, React Native, Voice AI, Node.js, distributed systems and Mobile Technology.</span>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -86,10 +88,7 @@ const BioComponent = () => {
                 </div>
             </section>
             <div className='contact-button-wrapper'>
-                <Button circular color='blue' size='huge'>
-                    <Icon name='mobile alternate' />
-                    Contact
-                </Button>
+                <ContactModal />
             </div>
         </Fragment>
     )
