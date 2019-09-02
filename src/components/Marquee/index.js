@@ -10,12 +10,7 @@ const Marquee = () => {
             </div>
             <div className='marquee-item'>
                 <Header block as='h1'>
-                    Jonathan Ortiz
-                </Header>
-            </div>
-            <div className='marquee-item'>
-                <Header as='h4' textAlign='center'>
-                    Front End Software Engineer - San Francisco, California
+                    javascript4breakfast
                 </Header>
             </div>
         </div>

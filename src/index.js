@@ -4,12 +4,13 @@ import NavBar from './components/NavBar';
 import DrawerMenu from './components/DrawerMenu';
 import Marquee from './components/Marquee';
 import TabNav from './components/TabNav';
+import InterestComponent from './components/InterestComponent';
+import BioComponent from './components/BioComponent';
+import SkillsComponent from './components/SkillsComponent';
 
 import 'semantic-ui-css/semantic.min.css'
 import './assets/css/hamburgers.css';
 import './assets/css/app.less';
-
-
 
 class App extends Component {
     constructor(props) {
@@ -21,7 +22,6 @@ class App extends Component {
     }
 
     handleItemClick = (e, { name }) => this.setState({ activeTabItem: name });
-
 
     toggleBurger = () => {
         const hamburger = document.querySelector('.hamburger');
@@ -39,6 +39,9 @@ class App extends Component {
                 { isDrawerOpen ? <DrawerMenu /> : null }
                 <Marquee />
                 <TabNav handleItemClick={this.handleItemClick.bind(this)} activeTab={activeTabItem} />
+                { activeTabItem === 'bio' ? <BioComponent /> : null }
+                { activeTabItem === 'skills' ? <SkillsComponent /> : null }
+                { activeTabItem === 'interest' ? <InterestComponent /> : null }
             </div>
         )
     }
