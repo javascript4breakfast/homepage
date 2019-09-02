@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Button, Card, Divider, Header, Icon, Segment} from 'semantic-ui-react';
+import {Button, Card, Divider, Header, Icon} from 'semantic-ui-react';
 
 const items = [
   {
@@ -11,7 +11,7 @@ const items = [
   {
     header: '📚 Adobe Digital Academy',
     description:
-      'A pioneer in education and career transformation offers members technology training.',
+      'A pioneer in education and career transformation offering members technology training.',
     meta: 'Alumni/Mentor',
   },
   {
@@ -20,7 +20,7 @@ const items = [
       'Helping members master new skills in design, marketing, technology, and data.',
     meta: 'Career Coach/Alumni/Mentor',
   },
-]
+];
 
 const BioComponent = () => {
     return (
@@ -37,6 +37,18 @@ const BioComponent = () => {
                             San Francisco, California
                         </Header.Subheader>
                     </Header>
+                    <div className='bio-links-wrapper'>
+                        <div>
+                            <a href='https://www.linkedin.com/in/jonathanortiz31' target='_blank'>
+                                <Icon size='big' name='linkedin'/>
+                            </a>
+                        </div>
+                        <div>
+                            <a href='https://www.github.com/javascript4breakfast' target='_blank'>
+                                <Icon size='big' name='github'/>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <article className='bio-article-wrapper'>
