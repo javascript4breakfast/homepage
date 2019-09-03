@@ -14,8 +14,8 @@ const TabNav = ({activeTab, handleItemClick}) => {
                    active={activeTab === 'skills'}
                    onClick={handleItemClick}/>
                <Menu.Item
-                   name='interest'
-                   active={activeTab === 'interest'}
+                   name='interests'
+                   active={activeTab === 'interests'}
                    onClick={handleItemClick}/>
              </Menu>
         </div>

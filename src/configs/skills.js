@@ -26,7 +26,6 @@ const skills = [
     {name: 'Internet of Things', level: 6, type: 'technical'},
     {name: 'UX Design', level: 6, type: 'non-technical'},
     {name: 'Marketing', level: 6, type: 'non-technical'},
-    {name: 'Project Management', level: 6, type: 'non-technical'},
     {name: 'HTML5', level: 6, type: 'technical'},
     {name: 'CSS Modules', level: 6, type: 'technical'},
     {name: 'Angular JS', level: 7, type: 'technical'},

@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import DrawerMenu from './components/DrawerMenu';
 import Marquee from './components/Marquee';
 import TabNav from './components/TabNav';
-import InterestComponent from './components/InterestComponent';
+import InterestsComponent from './components/InterestsComponent';
 import BioComponent from './components/BioComponent';
 import SkillsComponent from './components/SkillsComponent';
 
@@ -41,7 +41,7 @@ class App extends Component {
                 <TabNav handleItemClick={this.handleItemClick.bind(this)} activeTab={activeTabItem} />
                 { activeTabItem === 'bio' ? <BioComponent /> : null }
                 { activeTabItem === 'skills' ? <SkillsComponent /> : null }
-                { activeTabItem === 'interest' ? <InterestComponent /> : null }
+                { activeTabItem === 'interests' ? <InterestsComponent /> : null }
             </div>
         )
     }
