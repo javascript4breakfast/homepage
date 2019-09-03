@@ -64,14 +64,14 @@ const BioComponent = () => {
                         </div>
                         <div style={{marginTop: '0.8rem'}}>
                             <div style={{fontSize: '1.333rem'}}>
-                                A Javascript Engineer with more than four years of professional experience designing high level software applications for various business and consumer needs. Detail oriented team player who stays abreast of front end technology trends specifically in E-Commerce. Skilled at efficiently resolving project issues and meeting deadlines. <Divider hidden />
-                            <span style={{fontWeight: 'bold'}}>A special knack for React, React Native, Voice AI, Node.js, distributed systems and Mobile Technology.</span>
+                                A Javascript Engineer with more than four years of professional experience designing high level software applications for various business and consumer needs. Detail oriented team player who stays abreast of front end technology trends specifically in E-Commerce. Skilled at efficiently resolving project issues and meeting deadlines.<br />
+                            <div style={{fontWeight: 'bold', paddingTop:'1.333rem'}}>A special knack for React, React Native, Voice AI, Node.js, distributed systems and Mobile Technology.</div>
                             </div>
                         </div>
                     </div>
                 </article>
             </section>
-            <div style={{padding: '2rem 0 3rem 0'}}>
+            <div style={{padding: '0.5rem 0 2rem 0'}}>
                 <Divider />
             </div>
             <section className='bio-aff-wrapper'>
