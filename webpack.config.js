@@ -1,7 +1,7 @@
 const path = require('path');
 
 const config = {
-  mode: 'production',
+  mode: 'development',
   entry: {
       index: ['@babel/polyfill', './src/index.js',],
   },

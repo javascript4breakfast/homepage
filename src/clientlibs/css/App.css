@@ -1,0 +1,63 @@
+@import "button.css";
+@font-face {
+  font-family: "adobe-clean";
+  src: url("./fonts/AdobeClean-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: adobe-clean, Ubuntu, sans-serif;
+}
+body{
+  height: 100vh;
+}
+#root {
+  height: 100%;
+}
+.container {
+  background: red;
+  min-height: 100%;
+}
+.dropdown-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.333em;
+  width: 100vw;
+}
+.supreme--dark {
+  background: rgb(50, 50, 50);
+  color: rgb(255, 255, 255);
+  transition: background 200ms ease-in 50ms;
+}
+
+.supreme--darkest {
+  background: rgb(44, 44, 44);
+  color: rgb(239, 239, 239);
+  transition: background 200ms ease-in 50ms;
+}
+
+.supreme--light {
+  background: rgb(239, 239, 239);
+  color: rgb(50, 50, 50);
+  transition: background 200ms ease-in 50ms;
+}
+
+.supreme--lightest {
+  background: rgb(255, 255, 255);
+  color: rgb(44, 44, 44);
+  transition: background 200ms ease-in 50ms;
+}
+
+.app-wrapper {
+  display: flex;
+  font-size: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+}
+.huge-icon {
+  font-size: 3em;
+}
