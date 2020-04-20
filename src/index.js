@@ -1,32 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MainProvider, { AppContext } from './context';
 import './clientlibs/css/App.css';
 
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import { IoMdConstruct } from "react-icons/io";
-
-const AppContext = React.createContext([{}, () => {}]);
-const initialState = {
-  theme        : 'supreme--dark',
-  showThemeBar : false
-};
-const MainProvider = (props) => {
-  const [state, setState] = React.useState(initialState);
-  return (
-    <AppContext.Provider value={[state, setState]}>
-      {props.children}
-    </AppContext.Provider>
-  )
-}
-
-
-
-const themeMapper = {
-  'supreme--dark' : 'supreme--dark',
-  'supreme--darkest' : 'supreme--darkest',
-  'supreme--light' : 'supreme--light',
-  'supreme--lightest' : 'supreme--lightest'
-};
 
 function App() {
   const [state, setState] = React.useContext(AppContext);
@@ -36,8 +14,14 @@ function App() {
   };
 
   const handleThemeChange = value => {
-    setState(prevState => ({...prevState, theme: `supreme--${value.toLowerCase()}`}));
+    const result = `supreme--${value.toLowerCase()}`;
+
+    console.log('result', result);
+    setState(prevState => ({...prevState, theme: result }));
     toggleThemeBar();
+    if (window.localStorage) {
+      localStorage.setItem('appTheme', result);
+    }
   };
 
 

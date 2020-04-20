@@ -6,7 +6,7 @@
   "author": "joortiz",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config webpack.prod.config.js",
     "watch": "webpack -wd",
     "dev": "webpack-dev-server"
   },
