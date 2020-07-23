@@ -1,63 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import MainProvider, { AppContext } from './context';
+import useApp from './core/useApp';
+import Pages from './Pages';
+import Nav from './components/Nav';
+
+import 'antd/dist/antd.css';
 import './clientlibs/css/App.css';
 
-import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
-import { IoMdConstruct } from "react-icons/io";
-
 function App() {
-  const [state, setState] = React.useContext(AppContext);
-
-  const toggleThemeBar = () => {
-    setState(prevState => ({ ...prevState, showThemeBar: !state.showThemeBar }));
-  };
-
-  const handleThemeChange = value => {
-    const result = `supreme--${value.toLowerCase()}`;
-
-    console.log('result', result);
-    setState(prevState => ({...prevState, theme: result }));
-    toggleThemeBar();
-    if (window.localStorage) {
-      localStorage.setItem('appTheme', result);
-    }
-  };
-
-
-  const hide = {display:'none'};
-  const show = {display:'inherit'};
+  const [state] = React.useContext(AppContext);
   return (
-    <div className={`${state.theme} container`}>
-      <section className={`dropdown-wrapper`}>
-        <div style={state.showThemeBar ? hide : show}>
-          <button onClick={toggleThemeBar}>
-            {!state.showThemeBar && <AiOutlineDoubleRight />}
-          </button>
+    <Router>
+      <div>
+        <Nav theme={state.theme} />
+        <div className={state.theme}>
+          <section className="container">
+            <Pages />
+          </section>
         </div>
-        <div style={!state.showThemeBar ? hide : show}>
-          <button onClick={e => handleThemeChange(e.target.innerText)}>
-            darkest
-          </button>
-          <button onClick={e => handleThemeChange(e.target.innerText)}>
-            dark
-          </button>
-          <button onClick={e => handleThemeChange(e.target.innerText)}>
-            lightest
-          </button>
-          <button onClick={e => handleThemeChange(e.target.innerText)}>
-            light
-          </button>
-          <button className="spectrum-Button spectrum-Button--overBackground"  onClick={toggleThemeBar}>
-            <AiOutlineDoubleLeft />
-          </button>
-        </div>
-      </section>
-      <section className={`app-wrapper`}>
-        <IoMdConstruct className="huge-icon" />
-        <p>This website is under construction, but here's a preview.</p>
-      </section>
-    </div>
+      </div>
+    </Router>
   );
 };
 

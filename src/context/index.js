@@ -3,8 +3,8 @@ import React from 'react';
 const AppContext = React.createContext([{}, () => {}]);
 
 const initialState = {
-  theme        :  window.localStorage.getItem('appTheme') || 'supreme--darkest',
-  showThemeBar : false
+  theme         :  window.localStorage.getItem('supreme-theme') || 'light-mode',
+  showHelpModal : false
 };
 
 export default function MainProvider(props) {
