@@ -1,0 +1,151 @@
+.intro-wrapper {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  min-height: 35vh;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 28px;
+}
+.async-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 20vh;
+  align-items: center;
+}
+.box-items {
+  display: flex;
+  justify-content: center;
+  padding: 0 4em;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.breakfast-text {
+  text-align: right;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.covid-wrapper {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+}
+
+.data-wrapper {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 4em;
+}
+
+
+
+.header-text {
+  font-size: 2em;
+}
+.last-updated {
+  display: flex;
+  margin: 1em 4em;
+}
+.stop-wrapper {
+  margin-top: 6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4em;
+}
+.modal-icon {
+  font-size: 2.5em;
+}
+.modal-tab-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 15vh;
+  justify-content: space-around;
+}
+.row-wrapper {
+  margin-left: 4em;
+}
+@media (max-width: 700px) {
+  .intro-wrapper {
+    grid-template-columns: 100vw;
+    padding-top: 2em;
+    margin-bottom: 3em;
+  }
+
+  .row-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .covid-wrapper {
+    grid-template-columns: 100vw;
+  }
+
+  .data-wrapper {
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .last-updated {
+    justify-content: center;
+    margin: 0;
+  }
+  .stop-wrapper {
+    margin: 2em 0;
+  }
+}
+
+
+
+.triforce{
+  border-bottom:1.5em solid #FFCC00;
+  border-left:1em solid transparent;
+  border-right:1em solid transparent;
+  position:absolute;
+  display:inline-block;
+  height:0;
+  width:0;
+  margin:-1.5em -1em;
+  left:50%;
+  top:70%;
+  -webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+  animation: fadecolor 2s 1s infinite;
+}
+.triforce:before,
+.triforce:after{
+  border-bottom: 1.5em solid #FFCC00;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 1.5em;
+    width: 0;
+
+}
+.triforce:before{
+  left:0;
+  animation: fadecolor 1s 1s infinite;
+}
+.triforce:after{
+  right:0;
+  animation: fadecolor 3s 1s infinite;
+}
+
+@keyframes fadecolor {
+  0% {border-bottom-color: #eee;}
+  100%{border-bottom-color: #F7CA18;}
+}

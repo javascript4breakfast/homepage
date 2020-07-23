@@ -1,0 +1,12 @@
+.about-wrapper {
+  display: flex;
+  padding-top: 1em;
+  justify-content: center;
+}
+.big-icon {
+  font-size: 2em;
+  margin-bottom: -25px;
+}
+.center-text {
+  text-align: center;
+}
